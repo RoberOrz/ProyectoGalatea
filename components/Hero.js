@@ -1,6 +1,5 @@
 import Link from '@/components/Link'
 import { FaFacebook, FaBehance, FaGithub, FaInstagram } from 'react-icons/fa'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import ShapeLeft from 'public/static/images/shape-left.png'
 import ShapeRight from 'public/static/images/shape-right.png'
@@ -10,14 +9,8 @@ export default function Hero() {
       <div className="w-full overflow-hidden">
         <div className="flex items-center justify-center ">
           <div className="z-10 mx-4 rounded-lg p-5 lg:p-10 ">
-            <div className="container mx-auto grid text-center lg:grid-cols-2 lg:px-6 lg:py-5">
-              <motion.div
-                transition={{ delay: 0.3 }}
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="mx-auto flex max-w-lg items-center justify-center"
-              >
+            <div className="container mx-auto  text-center  lg:px-6 lg:py-5">
+              <div className="mx-auto flex max-w-lg items-center justify-center">
                 <div className="">
                   <h1 className=" text-6xl font-bold text-slate-800">
                     Tu Sitio Web Con La Mejor <span className="colored">Tecnología</span>
@@ -26,7 +19,7 @@ export default function Hero() {
                     Sitios y aplicaciones web, <span className="text-[#1d1d1f]">rapidos </span>y
                     eficientes para comenzar tu negocio..
                   </p>
-                  <ul className="mt-6 flex items-center justify-center gap-5 lg:justify-start">
+                  <ul className="mt-6 flex items-center justify-center gap-5">
                     <li className="rounded-full bg-slate-50 p-2">
                       <a
                         href="https://www.facebook.com/AnyDev.dev/"
@@ -76,7 +69,7 @@ export default function Hero() {
                     No requiere tarjeta de crédito
                   </p>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
