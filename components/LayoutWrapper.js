@@ -4,17 +4,21 @@ import Logo from '@/data/logo.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
+import Navbar from './Navbar'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 
 const LayoutWrapper = ({ children }) => {
   return (
-    <SectionContainer>
-      <div className="flex h-screen flex-col justify-between">
-        <main className="mb-auto">{children}</main>
-        <Footer />
-      </div>
-    </SectionContainer>
+    <>
+      <Navbar />
+      <SectionContainer>
+        <div className="flex h-screen flex-col justify-between">
+          <main className="mb-auto">{children}</main>
+          <Footer />
+        </div>
+      </SectionContainer>
+    </>
   )
 }
 

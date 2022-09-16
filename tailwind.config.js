@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   experimental: {
-    optimizeUniversalDefaults: true,
+    optimizeUniversalDefaults: false,
   },
   content: [
     './pages/**/*.js',
@@ -30,6 +30,9 @@ module.exports = {
       colors: {
         primary: colors.blue,
         gray: colors.neutral,
+        darkIos: '#111827',
+        darkIosLight: '#1e283b',
+        blueIosText: '#0066cc',
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -60,7 +63,7 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             pre: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.darkIos'),
             },
             code: {
               color: theme('colors.pink.500'),

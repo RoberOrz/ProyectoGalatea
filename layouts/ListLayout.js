@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -20,16 +21,18 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            {title}
-          </h1>
+          <div>
+            <h1 className="rounded-md p-3 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900 ">
+              {title}
+            </h1>
+          </div>
           <div className="relative max-w-lg">
             <input
               aria-label="Search articles"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search articles"
-              className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+              placeholder="Buscar articulos"
+              className="block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-transparent dark:bg-gray-700 dark:text-gray-100"
             />
             <svg
               className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
@@ -47,20 +50,36 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             </svg>
           </div>
         </div>
-        <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
+        <ul className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          {!filteredBlogPosts.length && 'Sin resultados.'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, summary, tags, images } = frontMatter
             return (
-              <li key={slug} className="py-4">
-                <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                  <dl>
-                    <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>{formatDate(date)}</time>
-                    </dd>
-                  </dl>
+              <li
+                key={slug}
+                className=" rounded-lg py-4 shadow-lg transition duration-150 hover:bg-gray-100/50 hover:shadow-xl dark:hover:bg-gray-900"
+              >
+                <article className="space-y-2 p-5">
                   <div className="space-y-3 xl:col-span-3">
+                    <div className="relative">
+                      <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
+                        <Image
+                          src={images}
+                          alt={title}
+                          width={1920}
+                          height={1080}
+                          className="rounded-md transition duration-150 hover:brightness-50"
+                        />
+                      </Link>
+                    </div>
+                    <div>
+                      <time
+                        className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"
+                        dateTime={date}
+                      >
+                        {formatDate(date)}
+                      </time>
+                    </div>
                     <div>
                       <h3 className="text-2xl font-bold leading-8 tracking-tight">
                         <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">

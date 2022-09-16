@@ -1,10 +1,10 @@
 ---
 name: Roberto Orozco
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
+occupation: FrontEnd Developer
+company: Anydev Solutions
+email: hola@anydev.info
+twitter: https://twitter.com/AnydevMx
 linkedin: https://www.linkedin.com
 github: https://github.com
 ---

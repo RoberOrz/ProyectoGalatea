@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,9 +19,56 @@
 .csl-entry {
   @apply my-5;
 }
+*{
+   
+font-family: 'Inter' ,ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif ;  
+}
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
+.navbar{
+  background-color:hsla(0,0%,100%,.8);
+  backdrop-filter: saturate(180%) blur(16px);
+}
+
+.colored{
+  background: #00C3FF;
+  background:linear-gradient(90deg, #0066c6 0%, #01c8c1 50%,#0066c6 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-animation-purecss 3s ease-in-out 0s infinite normal none running  ;
+  background-size: 200%;
+  }
+  .colored2{
+    background: #f08c00;
+    background:linear-gradient(90deg, #f0bc00 0%, #f75402 50%,#f0bc00 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-animation-purecss 3s ease-in-out 0s infinite normal none running  ;
+    background-size: 200%;
+    }
+    .changeColor{
+      background: #f08c00;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: text-animation-purecss 3s ease-in-out 0s infinite normal none running  ;
+      background-size: 200%;
+      }
+  
+  
+  @keyframes text-animation-purecss {
+    0%{
+      background-position-x: 0% ;
+      
+    }
+    100%{
+      background-position-x: -200% ;
+    }
+  }
+
