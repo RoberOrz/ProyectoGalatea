@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { PageSEO } from '@/components/SEO'
 import Hero from '@/components/Hero'
 import Features from '@/components/Features'
-import Faqs from '@/components/Faqs'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
@@ -25,7 +24,6 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <Hero />
       <Features />
-      <Faqs />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-3xl md:leading-14">
