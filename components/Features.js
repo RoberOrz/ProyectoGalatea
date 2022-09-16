@@ -28,8 +28,9 @@ export default function Features() {
   return (
     <>
       <div className="w-full overflow-hidden">
-        <div className="absolute h-[6rem] w-[6rem] translate-x-[-1rem] translate-y-[-1rem] rounded-full bg-[#0071e3] blur-xl"></div>
+        <div className="absolute h-[6rem] w-[6rem] translate-x-[-1rem] translate-y-[-1rem] rounded-full bg-[#0071e3] blur-[3rem]"></div>
         <div className="absolute h-[6rem] w-[6rem] translate-x-[3rem] translate-y-[4rem] rounded-full bg-[#b4a0ff] blur-xl"></div>
+        <div className="absolute right-9 h-[6rem] w-[6rem] translate-y-[7rem] rounded-full bg-[#ffa723bc] blur-xl"></div>
         <div className="rounded-md bg-slate-100/50 py-12 backdrop-blur-md dark:bg-gray-900/50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center">
@@ -44,7 +45,7 @@ export default function Features() {
                 {features.map((feature) => (
                   <div
                     key={feature.name}
-                    className="relative flex flex-col rounded-md bg-white/70 p-5 shadow-lg dark:border-[1px] dark:border-[#0071e3] dark:bg-transparent"
+                    className="relative flex flex-col rounded-md p-5 shadow-md shadow-slate-200 dark:border-[1px] dark:border-[#0071e3] dark:bg-transparent"
                   >
                     <div className="">
                       <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-[#B1D0D4] dark:bg-[#0071e300]">

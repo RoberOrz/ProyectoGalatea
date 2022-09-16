@@ -32,6 +32,14 @@ input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius:1rem ;
+}
+
 .navbar{
   background-color:hsla(0,0%,100%,.8);
   backdrop-filter: saturate(180%) blur(16px);
