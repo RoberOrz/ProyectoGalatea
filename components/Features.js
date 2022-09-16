@@ -1,7 +1,6 @@
 import { HiOutlineLightningBolt } from 'react-icons/hi'
 import { BsChat, BsCalendar4 } from 'react-icons/bs'
 import { RiComputerLine } from 'react-icons/ri'
-import { motion } from 'framer-motion'
 
 const features = [
   {
