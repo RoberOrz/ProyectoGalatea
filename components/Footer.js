@@ -4,29 +4,36 @@ import SocialIcon from '@/components/social-icons'
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="mt-16 flex flex-col items-center">
-        <div className="mb-3 flex space-x-4">
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />
-          <SocialIcon kind="github" href={siteMetadata.github} size="6" />
-          <SocialIcon kind="facebook" href={siteMetadata.facebook} size="6" />
-          <SocialIcon kind="youtube" href={siteMetadata.youtube} size="6" />
-          <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
-          <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
-        </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>{siteMetadata.author}</div>
-          <div>{` • `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link>
-        </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
-            Tailwind Nextjs Theme
+    <footer className="mx-3 mt-[10px] rounded-lg border-[1px] border-gray-200 bg-white  py-4 text-center dark:bg-gray-800 md:flex md:items-center md:justify-between md:p-6">
+      <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+        © 2022{' '}
+        <a href="https://anydev.dev" className="hover:underline">
+          AnyDev™
+        </a>
+        . All Rights Reserved.
+      </span>
+      <ul className="mt-3 flex flex-wrap items-center justify-center text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+          <a href="#" className="mr-4 hover:underline md:mr-6 ">
+            Nosotros
+          </a>
+        </li>
+        <li>
+          <Link href="/Terminos_y_Condiciones">
+            <a className="mr-4 hover:underline md:mr-6">Terminos y Condiciones</a>
           </Link>
-        </div>
-      </div>
+        </li>
+        <li>
+          <a href="#" className="mr-4 hover:underline md:mr-6">
+            Cookies
+          </a>
+        </li>
+        <li>
+          <a href="#" className="hover:underline">
+            Contacto
+          </a>
+        </li>
+      </ul>
     </footer>
   )
 }
